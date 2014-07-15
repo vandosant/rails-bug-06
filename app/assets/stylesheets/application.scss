@@ -1,0 +1,159 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+  @extend .clearfix;
+}
+
+header {
+  background: navy;
+  color: white;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+html, body {
+  background: #efefef;
+}
+
+main {
+  .container {
+    background: white;
+  }
+}
+
+.logo {
+  float: left;
+  font-weight: bold;
+}
+
+.logout {
+  float: right;
+}
+
+.errors {
+  color: maroon;
+  margin-bottom: 1em;
+}
+
+.signin-form {
+  width: 20em;
+  border: 1px solid #ccc;
+  padding: 2em;
+  margin: 2em auto;
+  background: #efefef;
+
+  > div {
+    padding: .3em 0;
+  }
+
+  label {
+    display: inline-block;
+    width: 6em;
+  }
+
+  input[type=submit] {
+    margin-left: 6.3em;
+  }
+}
+
+.task-list {
+  padding: 1em;
+  & + & {
+    border-top: 1px solid darkblue;
+  }
+
+  h1 {
+    font-size: 110%;
+    margin-top: 0;
+  }
+}
+
+.add-task {
+  float: right;
+}
+
+.task {
+  @extend .clearfix;
+  border: 2px solid #ccc;
+  background: #efefef;
+  padding: .5em;
+
+  & + & {
+    margin-top: .5em;
+  }
+}
+
+.empty {
+  border: 2px solid #ccc;
+  background: #efefef;
+  padding: 1em;
+  font-style: italic;
+  text-align: center;
+}
+
+.task-due {
+  color: #666;
+}
+
+.flash {
+  &.notice {
+    background: #B6D7A8;
+    border: 2px solid #2D6E10;
+    padding: .5em;
+  }
+}
+
+.task-form {
+  label {
+    display: block;
+    margin-bottom: .5em;
+  }
+
+  div.form-row {
+    padding-bottom: 2em;
+  }
+
+  input[type=submit] {
+    background: navy;
+    color: white;
+    border: 2px solid #666;
+    padding: .3em .5em;
+  }
+}
+
+.error {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: maroon;
+}
+
+.field_with_errors {
+  label {
+    color: maroon;
+  }
+}
+
+.complete-button {
+  float: right;
+}
