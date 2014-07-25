@@ -1,4 +1,4 @@
-# Rails Bug 05
+# Rails Bug 06
 
 ## Setup
 
