@@ -5,7 +5,7 @@
     <h1><%= task_list.name %></h1>
     <% tasks = task_list.tasks.incomplete.order(:due_date) %>
     <% if tasks.present? %>
-      <%= render partial: 'tasks/task', collection: tasks %>
+      <%= render partial: 'tasks/task', collection: tasks, locals: {task_list: task_list} %>
     <% else %>
       <div class="empty">Nothing here to see!</div>
     <% end %>
